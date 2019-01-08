@@ -1,11 +1,10 @@
 import { Recipe } from './model/recipe.model'
-import { EventEmitter, Injectable } from '@angular/core';
+import { Injectable } from '@angular/core';
 import { Ingredient } from '../common/model/ingredient.model';
 import { ShoppingListService } from '../shopping-list/shopping-list.service';
 
 @Injectable()
 export class RecipeService {
-    recipeSelected = new EventEmitter<Recipe>();
     private recipes: Recipe[] = [
         new Recipe("Classic", "The Classic Burger", 
         "https://www.maxpixel.net/static/photo/640/Burger-Cheeseburger-Hamburger-Dinner-Lunch-576419.jpg",
